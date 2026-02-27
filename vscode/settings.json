@@ -1,0 +1,42 @@
+{
+  // ── AI & COPILOT ZENITH ──────────────────────────────────────────
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.editor.enableAutoGuidance": true,
+  "chat.viewSessions.orientation": "stacked",
+  "chat.thinking.style": "detailed", // New for 2026: better visibility into AI reasoning
+  "chat.agent.thinking.terminalTools": true,
+  
+  // ── GIT & SOURCE CONTROL ────────────────────────────────────────
+  "git.autofetch": true,
+  "git.autorefresh": false, // Disable to save CPU/RAM on Ryzen AI 7
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+  // ── WSL2 & DOCKER STABILITY (CRITICAL) ──────────────────────────
+  "remote.SSH.useLocalServer": true,
+  "remote.WSL.fileWatcher.polling": true, // Prevents 100% CPU spikes in WSL
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+  "search.followSymlinks": false,
+  "search.useIgnoreFiles": true,
+
+  // ── HARDWARE ACCELERATION (AMD RADEON 860M) ─────────────────────
+  "terminal.integrated.gpuAcceleration": "on",
+  "editor.minimap.enabled": false, // Saves RAM/GPU on 16GB systems
+  "editor.renderWhitespace": "none",
+  "workbench.editor.restoreViewState": false,
+  "extensions.autoUpdate": false, // Manual updates prevent background crashes
+
+  // ── UI CONVERGENCE ──────────────────────────────────────────────
+  "workbench.colorTheme": "Catppuccin Macchiato", // Matches your terminal theme
+  "editor.fontFamily": "'FiraCode NF', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "terminal.integrated.fontFamily": "FiraCode NF"
+}
