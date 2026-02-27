@@ -1,0 +1,34 @@
+# .wslconfig — Dotfiles Citadel  ·  WSL2 Resource Governor
+# Managed by: https://github.com/geekedsilicon/dotfiles
+#
+# LIVE LOCATION: C:\Users\samue\.wslconfig
+# Applied automatically by scripts\setup.ps1 (via Copy-Item, not symlink,
+# because WSL reads this file before NTFS reparse points resolve).
+#
+# Restart WSL to apply: wsl --shutdown
+#
+# Reference: https://learn.microsoft.com/en-us/windows/wsl/wsl-config#wslconfig
+
+[wsl2]
+# Hard memory cap — protects the 16 GB host (AMD Ryzen AI 7) from WSL2
+# ballooning memory and causing system-wide exhaustion.
+memory      = 6GB
+
+# Virtual CPU count.  Half of physical cores is a good starting point.
+processors  = 4
+
+# Swap (WSL2 virtual swap file on the host NTFS volume).
+swap        = 2GB
+
+# Disable page reporting so WSL does not aggressively give memory back
+# to Windows (reduces balloon driver churn on long coding sessions).
+pageReporting = false
+
+# Kernel command-line options.
+kernelCommandLine = cgroup_no_v1=all systemd.unified_cgroup_hierarchy=1
+
+# Networking
+networkingMode  = mirrored
+dnsTunneling    = true
+firewall        = true
+autoProxy       = true

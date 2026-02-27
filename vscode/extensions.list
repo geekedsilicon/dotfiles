@@ -1,0 +1,51 @@
+# vscode/extensions.list — Dotfiles Citadel
+# Managed by: https://github.com/geekedsilicon/dotfiles
+#
+# Manifest of VS Code extensions for the Zenith dev environment.
+# Install all at once:
+#   cat vscode/extensions.list | grep -v '^#' | grep -v '^$' \
+#     | xargs -L1 code --install-extension
+#
+# Or in PowerShell:
+#   Get-Content vscode\extensions.list |
+#     Where-Object { $_ -notmatch '^#' -and $_.Trim() -ne '' } |
+#     ForEach-Object { code --install-extension $_ }
+
+# ---------------------------------------------------------------------------
+# Remote / WSL
+# ---------------------------------------------------------------------------
+ms-vscode-remote.remote-wsl
+ms-vscode-remote.remote-containers
+ms-vscode-remote.vscode-remote-extensionpack
+
+# ---------------------------------------------------------------------------
+# Language support
+# ---------------------------------------------------------------------------
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-python.python
+ms-python.pylance
+ms-vscode.cpptools
+golang.go
+rust-lang.rust-analyzer
+
+# ---------------------------------------------------------------------------
+# Git
+# ---------------------------------------------------------------------------
+eamodio.gitlens
+mhutchie.git-graph
+
+# ---------------------------------------------------------------------------
+# Appearance / UX
+# ---------------------------------------------------------------------------
+pkief.material-icon-theme
+aaron-bond.better-comments
+usernamehw.errorlens
+streetsidesoftware.code-spell-checker
+
+# ---------------------------------------------------------------------------
+# Productivity
+# ---------------------------------------------------------------------------
+christian-kohler.path-intellisense
+formulahendry.auto-rename-tag
+ms-vscode.live-server

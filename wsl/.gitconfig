@@ -1,0 +1,39 @@
+# ~/.gitconfig — Dotfiles Citadel
+# Managed by: https://github.com/geekedsilicon/dotfiles
+
+[user]
+	name  = geekedsilicon
+	email = you@example.com   # Replace with your real email
+
+[core]
+	editor      = nvim
+	filemode    = false        # Required for NTFS/WSL2 mounts
+	autocrlf    = input        # Normalise line endings on commit
+	whitespace  = trailing-space,space-before-tab
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool         = vimdiff
+	conflictstyle = diff3
+
+[alias]
+	st  = status -sb
+	lg  = log --oneline --graph --decorate --all
+	co  = checkout
+	br  = branch -vv
+	pu  = push
+	pl  = pull
+	sw  = switch
+	rbc = rebase --continue
+	rba = rebase --abort
