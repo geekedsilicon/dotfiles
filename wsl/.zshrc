@@ -267,3 +267,5 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 export XDG_RUNTIME_DIR="/tmp/run/user/$(id -u)"
 mkdir -p "$XDG_RUNTIME_DIR/fnm_multishells"
 eval "$(fnm env --use-on-cd --shell zsh)"
+alias zenith='sudo bash -c "echo nameserver 8.8.8.8 > /etc/resolv.conf" && cd /mnt/c/Users/samue/workspace/dotfiles && git pull && git add . && git commit -m "chore: auto-sync zenith" && git push && source ~/.zshrc && echo "🚀 Zenith System Fully Synced and Nominal."' 
+alias zenith='sudo bash -c "echo nameserver 8.8.8.8 > /etc/resolv.conf" && cd /mnt/c/Users/samue/workspace/dotfiles && git pull origin main && git add . && git commit -m "chore: auto-sync zenith" && git push origin main && source ~/.zshrc && echo "🚀 Zenith System Fully Synced and Nominal."' 
